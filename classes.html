@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruthi School of Arts - Classes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo">
+                <span>Sruthi School of Arts</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="director.html">Director</a></li>
+                    <li><a href="classes.html" class="active">Classes</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="arangerram.html">Arangerram</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero-banner green-bg">
+        <div class="container">
+            <h1>Dance Classes</h1>
+            <p>Begin your journey in classical Indian dance</p>
+        </div>
+    </section>
+
+    <section class="classes-content">
+        <div class="container content-two-column-equal">
+            <div class="card class-registration">
+                <h2>Class Registration</h2>
+                <p>Fill out this form to enroll your child in our Bharatanatyam classes</p>
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentFirstName">Student First Name *</label>
+                            <input type="text" id="studentFirstName" name="studentFirstName" placeholder="First name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentLastName">Student Last Name *</label>
+                            <input type="text" id="studentLastName" name="studentLastName" placeholder="Last name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birthDate">Birth Date *</label>
+                            <input type="date" id="birthDate" name="birthDate" placeholder="mm/dd/yyyy" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gradeLevel">Current Grade Level</label>
+                            <input type="text" id="gradeLevel" name="gradeLevel" placeholder="e.g., 5th grade">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentName">Parent/Guardian Name *</label>
+                            <input type="text" id="parentName" name="parentName" placeholder="Full name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Street address, City, State, ZIP">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any previous dance experience, special needs, or questions..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Registration</button>
+                </form>
+            </div>
+
+            <div class="card class-details-column">
+                <div class="card class-structure">
+                    <h2>Class Structure</h2>
+                    <img src="images/Screen Shot 2025-06-30 at 8.01.28 PM.jpg" alt="Students in a Dance Class" class="class-image">
+                    <ul>
+                        <li><span class="detail-label">Frequency:</span> Classes held twice weekly for optimal learning</li>
+                        <li><span class="detail-label">Age Requirement:</span> Minimum 4 years of age</li>
+                        <li><span class="detail-label">Setting:</span> Group classes until Arangetram level</li>
+                        <li><span class="detail-label">Flexibility:</span> Zoom classes available when sick or unavailable</li>
+                        <li><span class="detail-label">Visits:</span> Class visits available upon request</li>
+                    </ul>
+                </div>
+
+                <div class="card dress-code">
+                    <h2>Dress Code</h2>
+                    <ul>
+                        <li><span class="detail-label">Attire:</span> Fitted Churidar, Salwar Kameez, or tights with leggings</li>
+                        <li><span class="detail-label">Dupatta:</span> Long dupatta required for practice</li>
+                        <li><span class="detail-label">Hair:</span> Combed away from face, secured properly</li>
+                        <li><span class="detail-label">Bindi:</span> Traditional bindi on the forehead</li>
+                        <li><span class="detail-label">Footwear:</span> Barefoot for dance practice</li>
+                    </ul>
+                </div>
+
+                <div class="card school-policies">
+                    <h2>School Policies</h2>
+                    <ul>
+                        <li><span class="detail-label">Commitment:</span> We prioritize dedication and open-minded learning</li>
+                        <li><span class="detail-label">Soft Skills:</span> Focus on developing discipline and cultural appreciation</li>
+                        <li><span class="detail-label">Performances:</span> Required participation in annual day/school productions</li>
+                        <li><span class="detail-label">Opportunities:</span> Multiple performance opportunities throughout the year</li>
+                        <li><span class="detail-label">Payment:</span> Monthly fees accepted online or cash, due end of each month</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <div class="container">
+            <h2>Begin Your Dance Journey</h2>
+            <p>Join our community of dedicated students and discover the beauty of classical Indian dance</p>
+            <div class="cta-buttons">
+                <a href="classes.html" class="button primary-button">Explore Classes</a>
+                <a href="contact.html" class="button secondary-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
