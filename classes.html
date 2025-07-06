@@ -4,141 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sruthi School of Arts - Classes</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Global Styles that cannot be truly inlined or are best kept here */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Responsive Design (these must be in a style block) */
+        @media (max-width: 992px) {
+            .navbar .container {
+                flex-direction: column;
+            }
+
+            .navbar nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar nav ul li {
+                margin: 5px 10px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .button {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .classes-content .content-two-column-equal {
+                flex-direction: column; /* Stack columns on smaller screens */
+                gap: 40px; /* Increase gap when stacked */
+            }
+
+            .classes-content .class-registration,
+            .classes-content .class-details-column {
+                flex: none; /* Reset flex to allow full width */
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column; /* Stack form groups within a row */
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero-banner h1,
+            .call-to-action h2 {
+                font-size: 2.2em;
+            }
+
+            .page-hero-banner p,
+            .call-to-action p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-hero-banner h1,
+            .call-to-action h2,
+            .classes-content .class-registration h2,
+            .classes-content .card h2 {
+                font-size: 1.8em;
+            }
+
+            .classes-content .class-registration,
+            .classes-content .card {
+                padding: 20px;
+            }
+
+            .form-group label {
+                font-size: 0.85em;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .submit-button {
+                font-size: 0.95em;
+                padding: 10px;
+            }
+
+            .classes-content ul li {
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo">
+    <header class="navbar" style="background-color: #8B0000; color: white; padding: 10px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="display: flex; align-items: center; font-size: 1.5em; font-weight: bold;">
+                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo" style="height: 40px; margin-right: 10px; filter: brightness(0) invert(1);">
                 <span>Sruthi School of Arts</span>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="director.html">Director</a></li>
-                    <li><a href="classes.html" class="active">Classes</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="arangerram.html">Arangerram</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+                    <li style="margin-left: 20px;"><a href="index.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Home</a></li>
+                    <li style="margin-left: 20px;"><a href="director.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Director</a></li>
+                    <li style="margin-left: 20px;"><a href="classes.html" class="active" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px; background-color: #B22222;">Classes</a></li>
+                    <li style="margin-left: 20px;"><a href="events.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Events</a></li>
+                    <li style="margin-left: 20px;"><a href="arangerram.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Arangerram</a></li>
+                    <li style="margin-left: 20px;"><a href="contact.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="page-hero-banner green-bg">
+    <section class="page-hero-banner" style="background-color: #364b42; color: white; text-align: center; padding: 60px 0 40px;">
         <div class="container">
-            <h1>Dance Classes</h1>
-            <p>Begin your journey in classical Indian dance</p>
+            <h1 style="font-size: 2.8em; margin-bottom: 10px;">Dance Classes</h1>
+            <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto;">Begin your journey in classical Indian dance</p>
         </div>
     </section>
 
-    <section class="classes-content">
-        <div class="container content-two-column-equal">
-            <div class="card class-registration">
-                <h2>Class Registration</h2>
-                <p>Fill out this form to enroll your child in our Bharatanatyam classes</p>
+    <section class="classes-content" style="background-color: #DDEEE8; padding: 60px 0;">
+        <div class="container content-two-column-equal" style="display: flex; gap: 30px; align-items: flex-start;">
+            <div class="card class-registration" style="flex: 1; background-color: #FFFFFF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                <h2 style="color: #8B0000; margin-bottom: 10px; font-size: 1.8em;">Class Registration</h2>
+                <p style="color: #555; margin-bottom: 25px; font-size: 0.95em;">Fill out this form to enroll your child in our Bharatanatyam classes</p>
                 <form action="#" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="studentFirstName">Student First Name *</label>
-                            <input type="text" id="studentFirstName" name="studentFirstName" placeholder="First name" required>
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 15px;">
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="studentFirstName" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Student First Name *</label>
+                            <input type="text" id="studentFirstName" name="studentFirstName" placeholder="First name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
                         </div>
-                        <div class="form-group">
-                            <label for="studentLastName">Student Last Name *</label>
-                            <input type="text" id="studentLastName" name="studentLastName" placeholder="Last name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="birthDate">Birth Date *</label>
-                            <input type="date" id="birthDate" name="birthDate" placeholder="mm/dd/yyyy" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="gradeLevel">Current Grade Level</label>
-                            <input type="text" id="gradeLevel" name="gradeLevel" placeholder="e.g., 5th grade">
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="studentLastName" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Student Last Name *</label>
+                            <input type="text" id="studentLastName" name="studentLastName" placeholder="Last name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="parentName">Parent/Guardian Name *</label>
-                            <input type="text" id="parentName" name="parentName" placeholder="Full name" required>
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 15px;">
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="birthDate" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Birth Date *</label>
+                            <input type="date" id="birthDate" name="birthDate" placeholder="mm/dd/yyyy" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
+                        </div>
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="gradeLevel" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Current Grade Level</label>
+                            <input type="text" id="gradeLevel" name="gradeLevel" placeholder="e.g., 5th grade" style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 15px;">
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="parentName" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Parent/Guardian Name *</label>
+                            <input type="text" id="parentName" name="parentName" placeholder="Full name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
                         </div>
                     </div>
-                    <div class="form-group full-width">
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" placeholder="Street address, City, State, ZIP">
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 15px;">
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="email" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
+                        </div>
+                        <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+                            <label for="phone" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
+                        </div>
                     </div>
-                    <div class="form-group full-width">
-                        <label for="additionalInfo">Additional Information</label>
-                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any previous dance experience, special needs, or questions..."></textarea>
+                    <div class="form-group full-width" style="flex: none; width: 100%; display: flex; flex-direction: column; margin-bottom: 15px;">
+                        <label for="address" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Street address, City, State, ZIP" style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box;">
                     </div>
-                    <button type="submit" class="submit-button">Submit Registration</button>
+                    <div class="form-group full-width" style="flex: none; width: 100%; display: flex; flex-direction: column; margin-bottom: 15px;">
+                        <label for="additionalInfo" style="font-weight: bold; margin-bottom: 8px; color: #555; font-size: 0.9em;">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any previous dance experience, special needs, or questions..." style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button" style="background-color: #2E8B57; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; width: auto; margin-top: 20px;">Submit Registration</button>
                 </form>
             </div>
 
-            <div class="card class-details-column">
-                <div class="card class-structure">
-                    <h2>Class Structure</h2>
-                    <img src="images/Screen Shot 2025-06-30 at 8.01.28 PM.jpg" alt="Students in a Dance Class" class="class-image">
-                    <ul>
-                        <li><span class="detail-label">Frequency:</span> Classes held twice weekly for optimal learning</li>
-                        <li><span class="detail-label">Age Requirement:</span> Minimum 4 years of age</li>
-                        <li><span class="detail-label">Setting:</span> Group classes until Arangetram level</li>
-                        <li><span class="detail-label">Flexibility:</span> Zoom classes available when sick or unavailable</li>
-                        <li><span class="detail-label">Visits:</span> Class visits available upon request</li>
+            <div class="card class-details-column" style="flex: 1; display: flex; flex-direction: column; gap: 30px;">
+                <div class="card class-structure" style="background-color: #F0F8FF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                    <h2 style="color: #8B0000; margin-bottom: 20px; font-size: 1.8em;">Class Structure</h2>
+                    <img src="images/Screen Shot 2025-06-30 at 8.01.28 PM.jpg" alt="Students in a Dance Class" class="class-image" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Frequency:</span> Classes held twice weekly for optimal learning</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Age Requirement:</span> Minimum 4 years of age</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Setting:</span> Group classes until Arangetram level</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Flexibility:</span> Zoom classes available when sick or unavailable</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Visits:</span> Class visits available upon request</li>
                     </ul>
                 </div>
 
-                <div class="card dress-code">
-                    <h2>Dress Code</h2>
-                    <ul>
-                        <li><span class="detail-label">Attire:</span> Fitted Churidar, Salwar Kameez, or tights with leggings</li>
-                        <li><span class="detail-label">Dupatta:</span> Long dupatta required for practice</li>
-                        <li><span class="detail-label">Hair:</span> Combed away from face, secured properly</li>
-                        <li><span class="detail-label">Bindi:</span> Traditional bindi on the forehead</li>
-                        <li><span class="detail-label">Footwear:</span> Barefoot for dance practice</li>
+                <div class="card dress-code" style="background-color: #F5EEFF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                    <h2 style="color: #8B0000; margin-bottom: 20px; font-size: 1.8em;">Dress Code</h2>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Attire:</span> Fitted Churidar, Salwar Kameez, or tights with leggings</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Dupatta:</span> Long dupatta required for practice</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Hair:</span> Combed away from face, secured properly</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Bindi:</span> Traditional bindi on the forehead</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Footwear:</span> Barefoot for dance practice</li>
                     </ul>
                 </div>
 
-                <div class="card school-policies">
-                    <h2>School Policies</h2>
-                    <ul>
-                        <li><span class="detail-label">Commitment:</span> We prioritize dedication and open-minded learning</li>
-                        <li><span class="detail-label">Soft Skills:</span> Focus on developing discipline and cultural appreciation</li>
-                        <li><span class="detail-label">Performances:</span> Required participation in annual day/school productions</li>
-                        <li><span class="detail-label">Opportunities:</span> Multiple performance opportunities throughout the year</li>
-                        <li><span class="detail-label">Payment:</span> Monthly fees accepted online or cash, due end of each month</li>
+                <div class="card school-policies" style="background-color: #FFF8E1; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                    <h2 style="color: #8B0000; margin-bottom: 20px; font-size: 1.8em;">School Policies</h2>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Commitment:</span> We prioritize dedication and open-minded learning</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Soft Skills:</span> Focus on developing discipline and cultural appreciation</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Performances:</span> Required participation in annual day/school productions</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Opportunities:</span> Multiple performance opportunities throughout the year</li>
+                        <li style="margin-bottom: 12px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span><span class="detail-label" style="font-weight: bold; color: #444;">Payment:</span> Monthly fees accepted online or cash, due end of each month</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="call-to-action">
+    <section class="call-to-action" style="background-color: #CD5C5C; color: white; text-align: center; padding: 60px 0;">
         <div class="container">
-            <h2>Begin Your Dance Journey</h2>
-            <p>Join our community of dedicated students and discover the beauty of classical Indian dance</p>
-            <div class="cta-buttons">
-                <a href="classes.html" class="button primary-button">Explore Classes</a>
-                <a href="contact.html" class="button secondary-button">Contact Us</a>
+            <h2 style="font-size: 2.5em; margin-bottom: 20px;">Begin Your Dance Journey</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">Join our community of dedicated students and discover the beauty of classical Indian dance</p>
+            <div class="cta-buttons" style="display: flex; justify-content: center; gap: 20px;">
+                <a href="classes.html" class="button primary-button" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; background-color: #FF4500; color: white; border: 2px solid #FF4500;">Explore Classes</a>
+                <a href="contact.html" class="button secondary-button" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; background-color: transparent; color: white; border: 2px solid white;">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 0; font-size: 0.9em;">
         <div class="container">
-            <p>&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
+            <p style="margin: 0;">&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
         </div>
     </footer>
 </body>
