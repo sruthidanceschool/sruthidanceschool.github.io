@@ -4,108 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sruthi School of Arts - Director</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Global Styles that cannot be truly inlined or are best kept here */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Responsive Design (these must be in a style block) */
+        @media (max-width: 992px) {
+            .navbar .container {
+                flex-direction: column;
+            }
+
+            .navbar nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar nav ul li {
+                margin: 5px 10px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .button {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .director-intro-section .content-two-column-reversed,
+            .journey-expertise-section .content-two-column {
+                flex-direction: column; /* Stack columns on smaller screens */
+                align-items: center; /* Center items when stacked */
+                gap: 40px; /* Increase gap when stacked */
+            }
+
+            .director-intro-section .image-content {
+                order: -1; /* Puts the image above text on small screens */
+                margin-bottom: 30px;
+            }
+
+            .director-intro-section .director-portrait {
+                max-width: 60%; /* Adjust image size on small screens */
+            }
+
+            .teaching-philosophy-box {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero-banner h1,
+            .notable-achievements-section h2,
+            .call-to-action h2 {
+                font-size: 2.2em;
+            }
+
+            .page-hero-banner p,
+            .call-to-action p {
+                font-size: 1em;
+            }
+
+            .notable-achievements-section ul li {
+                padding-left: 35px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-hero-banner h1,
+            .director-intro-section h2,
+            .journey-expertise-section .main-content h3,
+            .notable-achievements-section h2,
+            .call-to-action h2 {
+                font-size: 1.8em;
+            }
+
+            .director-intro-section .director-portrait {
+                max-width: 80%;
+            }
+
+            .notable-achievements-section ul li {
+                padding-left: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo">
+    <header class="navbar" style="background-color: #8B0000; color: white; padding: 10px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="display: flex; align-items: center; font-size: 1.5em; font-weight: bold;">
+                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo" style="height: 40px; margin-right: 10px; filter: brightness(0) invert(1);">
                 <span>Sruthi School of Arts</span>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="director.html" class="active">Director</a></li>
-                    <li><a href="classes.html">Classes</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="arangerram.html">Arangerram</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+                    <li style="margin-left: 20px;"><a href="index.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Home</a></li>
+                    <li style="margin-left: 20px;"><a href="director.html" class="active" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px; background-color: #B22222;">Director</a></li>
+                    <li style="margin-left: 20px;"><a href="classes.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Classes</a></li>
+                    <li style="margin-left: 20px;"><a href="events.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Events</a></li>
+                    <li style="margin-left: 20px;"><a href="arangerram.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Arangerram</a></li>
+                    <li style="margin-left: 20px;"><a href="contact.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="page-hero-banner">
+    <section class="page-hero-banner" style="background-color: #A52A2A; color: white; text-align: center; padding: 60px 0 40px;">
         <div class="container">
-            <h1>Our Artistic Director</h1>
-            <p>Meet the visionary behind Sruthi School of Arts</p>
+            <h1 style="font-size: 2.8em; margin-bottom: 10px;">Our Artistic Director</h1>
+            <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto;">Meet the visionary behind Sruthi School of Arts</p>
         </div>
     </section>
 
-    <section class="director-intro-section">
-        <div class="container content-two-column-reversed">
-            <div class="main-content">
-                <h2>Sharanyaa Ganesan</h2>
+    <section class="director-intro-section" style="padding: 60px 0; background-color: #F8F8F8;">
+        <div class="container content-two-column-reversed" style="display: flex; gap: 40px; align-items: flex-start; flex-direction: row-reverse;">
+            <div class="main-content" style="flex: 2;">
+                <h2 style="color: #8B0000; font-size: 2.2em; margin-bottom: 20px;">Sharanyaa Ganesan</h2>
                 <p>Sharanyaa Ganesan is a distinguished Bharatanatyam artist and the founder of Sruthi School of Arts. With over two decades of dedicated practice and teaching, she has established herself as a respected figure in the classical dance community of the Bay Area.</p>
 
-                <h3>Quick Facts</h3>
-                <ul>
-                    <li>Founder & Artistic Director</li>
-                    <li>20+ years of teaching experience</li>
-                    <li>Trained under renowned gurus</li>
-                    <li>Multiple award recipient</li>
-                    <li>International performer</li>
+                <h3 style="color: #B22222; font-size: 1.5em; margin-top: 30px; margin-bottom: 15px;">Quick Facts</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Founder & Artistic Director</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>20+ years of teaching experience</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Trained under renowned gurus</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Multiple award recipient</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>International performer</li>
                 </ul>
             </div>
-            <div class="image-content">
-                <img src="images/IMG_2481.JPG" alt="Sharanyaa Ganesan - Artistic Director" class="director-portrait">
+            <div class="image-content" style="flex: 1; text-align: center;">
+                <img src="images/IMG_2481.JPG" alt="Sharanyaa Ganesan - Artistic Director" class="director-portrait" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); object-fit: cover; aspect-ratio: 4/5;">
             </div>
         </div>
     </section>
 
-    <section class="journey-expertise-section">
-        <div class="container content-two-column">
-            <div class="main-content">
-                <h3>Journey & Training</h3>
+    <section class="journey-expertise-section" style="padding: 60px 0; background-color: #E6E6FA;">
+        <div class="container content-two-column" style="display: flex; gap: 40px; align-items: flex-start;">
+            <div class="main-content" style="flex: 2;">
+                <h3 style="color: #8B0000; font-size: 1.8em; margin-bottom: 15px;">Journey & Training</h3>
                 <p>Sharanyaa began her dance journey at the tender age of five, training under the guidance of renowned gurus in the traditional Guru-Shishya parampara. Her rigorous training encompassed not only the technical aspects of Bharatanatyam but also its spiritual and cultural dimensions.</p>
                 <p>She completed her Arangetram at the age of 16 and continued to deepen her knowledge through advanced training in various aspects of the art form, including choreography, music theory, and dance history.</p>
 
-                <h3>Expertise & Mastery</h3>
-                <ul>
-                    <li>Classical repertoire and traditional margam</li>
-                    <li>Abhinaya (expressive dance) specialization</li>
-                    <li>Choreographic innovation while preserving tradition</li>
-                    <li>Music theory and rhythm (Tala) understanding</li>
-                    <li>Cultural and historical context of dance pieces</li>
+                <h3 style="color: #8B0000; font-size: 1.8em; margin-bottom: 15px;">Expertise & Mastery</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Classical repertoire and traditional margam</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Abhinaya (expressive dance) specialization</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Choreographic innovation while preserving tradition</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Music theory and rhythm (Tala) understanding</li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Cultural and historical context of dance pieces</li>
                 </ul>
             </div>
-            <aside class="teaching-philosophy-box">
-                <h3>Teaching Philosophy</h3>
+            <aside class="teaching-philosophy-box" style="flex: 1; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #8B0000; margin-bottom: 20px; font-size: 1.5em;">Teaching Philosophy</h3>
                 <p>As an educator, Sharanyaa believes in nurturing each student's individual potential while maintaining the authentic essence of Bharatanatyam. Her teaching methodology combines traditional techniques with modern pedagogical approaches, ensuring students develop both technical proficiency and artistic expression.</p>
                 <p>She emphasizes the importance of discipline, cultural respect, and personal growth through dance, preparing students not just to perform, but to become ambassadors of this beautiful art form.</p>
             </aside>
         </div>
     </section>
 
-    <section class="notable-achievements-section">
+    <section class="notable-achievements-section" style="padding: 60px 0; background-color: #F8F8F8;">
         <div class="container">
-            <h2>Notable Achievements</h2>
-            <ul>
-                <li>Founded Sruthi School of Arts in 2010</li>
-                <li>Trained over 200 students to date</li>
-                <li>Conducted 15+ successful Arangetrams</li>
-                <li>Regular performer at cultural festivals</li>
-                <li>Featured artist at major Bay Area events</li>
-                <li>Guest lecturer at universities</li>
+            <h2 style="color: #8B0000; text-align: center; font-size: 2.5em; margin-bottom: 40px;">Notable Achievements</h2>
+            <ul style="list-style: none; padding: 0; margin: 0 auto; max-width: 800px;">
+                <li style="background-color: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); position: relative; padding-left: 45px; font-size: 1.1em;"><span style="content: '✓'; color: #228B22; font-size: 1.5em; font-weight: bold; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">&#10003;</span>Founded Sruthi School of Arts in 2010</li>
+                <li style="background-color: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); position: relative; padding-left: 45px; font-size: 1.1em;"><span style="content: '✓'; color: #228B22; font-size: 1.5em; font-weight: bold; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">&#10003;</span>Trained over 200 students to date</li>
+                <li style="background-color: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); position: relative; padding-left: 45px; font-size: 1.1em;"><span style="content: '✓'; color: #228B22; font-size: 1.5em; font-weight: bold; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">&#10003;</span>Conducted 15+ successful Arangetrams</li>
+                <li style="background-color: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); position: relative; padding-left: 45px; font-size: 1.1em;"><span style="content: '✓'; color: #228B22; font-size: 1.5em; font-weight: bold; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">&#10003;</span>Regular performer at cultural festivals</li>
+                <li style="background-color: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); position: relative; padding-left: 45px; font-size: 1.1em;"><span style="content: '✓'; color: #228B22; font-size: 1.5em; font-weight: bold; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">&#10003;</span>Featured artist at major Bay Area events</li>
+                <li style="background-color: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); position: relative; padding-left: 45px; font-size: 1.1em;"><span style="content: '✓'; color: #228B22; font-size: 1.5em; font-weight: bold; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">&#10003;</span>Guest lecturer at universities</li>
             </ul>
         </div>
     </section>
 
-    <section class="call-to-action">
+    <section class="call-to-action" style="background-color: #CD5C5C; color: white; text-align: center; padding: 60px 0;">
         <div class="container">
-            <h2>Begin Your Dance Journey</h2>
-            <p>Join our community of dedicated students and discover the beauty of classical Indian dance</p>
-            <div class="cta-buttons">
-                <a href="classes.html" class="button primary-button">Explore Classes</a>
-                <a href="contact.html" class="button secondary-button">Contact Us</a>
+            <h2 style="font-size: 2.5em; margin-bottom: 20px;">Begin Your Dance Journey</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">Join our community of dedicated students and discover the beauty of classical Indian dance</p>
+            <div class="cta-buttons" style="display: flex; justify-content: center; gap: 20px;">
+                <a href="classes.html" class="button primary-button" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; background-color: #FF4500; color: white; border: 2px solid #FF4500;">Explore Classes</a>
+                <a href="contact.html" class="button secondary-button" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; background-color: transparent; color: white; border: 2px solid white;">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 0; font-size: 0.9em;">
         <div class="container">
-            <p>&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
+            <p style="margin: 0;">&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
         </div>
     </footer>
 </body>
