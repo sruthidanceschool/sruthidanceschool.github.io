@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruthi School of Arts - Arangetram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the primary color (Blue HSL(210, 100%, 50%)) and a secondary (Pink) */
+        :root {
+            --color-primary-base: 210, 100%, 50%; /* Vibrant Blue */
+            --color-primary-light: 210, 100%, 95%; /* Very light blue for background/hover */
+            --color-primary-dark: 210, 100%, 30%; /* Darker blue for hover/text */
+            --color-secondary: 330, 80%, 60%; /* Vibrant Pink */
+        }
+        
+        .header-section {
+            background-color: hsl(var(--color-primary-base));
+            color: white; /* Ensure text is readable on the dark blue background */
+            padding-bottom: 3rem; /* Add some padding below the title */
+        }
 
+        .text-primary-base {
+            color: hsl(var(--color-primary-base));
+        }
+
+        .text-secondary {
+            color: hsl(var(--color-secondary));
+        }
+
+        .border-secondary {
+            border-color: hsl(var(--color-secondary));
+        }
+
+        .button-primary {
+            background-color: hsl(var(--color-primary-base));
+            transition: background-color 0.3s;
+        }
+
+        .button-primary:hover {
+            background-color: hsl(var(--color-primary-dark));
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s;
+        }
+
+        .card-shadow:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Responsive Navbar adjustments for better mobile experience */
+        .navbar-item {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-item:hover {
+            background-color: hsl(var(--color-primary-dark));
+        }
+        
+        .navbar-active {
+            background-color: hsl(var(--color-primary-dark));
+        }
+
+        /* Ensure smooth image scaling */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Text list styling */
+        .list-item {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: #4b5563; /* Gray text for readability */
+        }
+
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold text-primary-base">Sruthi School of Arts</span>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+                    <a href="#" class="navbar-item text-white bg-primary-base text-gray-700 hover:text-white" style="background-color: hsl(var(--color-primary-base));">Home</a>
+                    <a href="#" class="navbar-item text-gray-700 hover:text-white" style="background-color: hsl(var(--color-primary-base));">Director</a>
+                    <a href="#" class="navbar-item text-gray-700 hover:text-white" style="background-color: hsl(var(--color-primary-base));">Classes</a>
+                    <a href="#" class="navbar-item text-gray-700 hover:text-white" style="background-color: hsl(var(--color-primary-base));">Events</a>
+                    <a href="#" class="navbar-item navbar-active text-white" style="background-color: hsl(var(--color-primary-base));">Arangetram</a>
+                    <a href="#" class="navbar-item text-gray-700 hover:text-white" style="background-color: hsl(var(--color-primary-base));">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Big Header Section (Arangetram) -->
+    <header class="header-section text-center py-16">
+        <h1 class="text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">Arangetram</h1>
+        <p class="mt-4 text-xl font-medium text-white/90">The Sacred Debut - A Dancer's First Solo Performance</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- What is Arangetram? -->
+        <section class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-primary-base">What is Arangetram?</h2>
+                <p class="text-gray-600">Arangetram, derived from the Tamil words 'Arangam' (stage) and 'Etram' (ascending), literally means "ascending the stage." It marks a classical dancer's debut solo performance, representing the culmination of years of rigorous training and the transition from student to artist.</p>
+                <p class="text-gray-600">This sacred tradition is not merely a performance but a spiritual milestone that demonstrates the dancer's mastery of technique, understanding of classical repertoire, and ability to convey the profound emotions and stories embedded in Bharatanatyam.</p>
+                <p class="text-gray-600">At Sruthi School of Arts, we consider Arangetram the most significant achievement in a student's classical dance journey, typically reached after 6-8 years of dedicated practice and learning.</p>
+            </div>
+            <!-- Image for "What is Arangetram?" replaced with uploaded file -->
+            <div class="rounded-lg overflow-hidden card-shadow">
+                <img src="Screenshot 2025-11-22 at 6.48.47 PM.jpg" alt="A dancer preparing for performance" class="responsive-image">
+            </div>
+        </section>
+
+        <!-- The Journey to Arangetram -->
+        <section class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-primary-base mb-10">The Journey to Arangetram</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+
+                <!-- Stage 1: Foundation -->
+                <div class="p-6 rounded-xl border border-primary-base/50 bg-white card-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Years 1-3: Foundation</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="list-item">Basic postures and movements</li>
+                        <li class="list-item">Rhythm and coordination</li>
+                        <li class="list-item">Simple adavus (dance steps)</li>
+                        <li class="list-item">Cultural understanding</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 2: Development -->
+                <div class="p-6 rounded-xl border border-secondary bg-white card-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Years 4-6: Development</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="list-item">Complex choreography</li>
+                        <li class="list-item">Jathis and sequences</li>
+                        <li class="list-item">Abhinaya (expression)</li>
+                        <li class="list-item">Musical understanding</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 3: Mastery -->
+                <div class="p-6 rounded-xl border border-primary-base/50 bg-white card-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Years 6-8: Mastery</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="list-item">Full margam repertoire</li>
+                        <li class="list-item">Solo performance skills</li>
+                        <li class="list-item">Artistic interpretation</li>
+                        <li class="list-item">Cultural ambassadorship</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Legacy & Stats -->
+        <section class="text-center mb-16">
+            <div class="max-w-3xl mx-auto p-8 rounded-xl border border-primary-base/50 bg-white card-shadow">
+                <h2 class="text-2xl font-bold text-primary-base mb-6">Our Legacy</h2>
+                
+                <!-- Added new image here -->
+                <div class="mb-6 rounded-lg overflow-hidden card-shadow">
+                    <img src="Screenshot 2025-11-22 at 6.51.22 PM.jpg" alt="Picture of two dancers on a stage" class="responsive-image">
+                </div>
+
+                <p class="text-gray-600 mb-8">Over the past decade, Sruthi School of Arts has proudly facilitated over 15 successful Arangetrams, each one a unique celebration of the individual dancer's journey and artistic expression.</p>
+                <div class="flex justify-around">
+                    <div>
+                        <p class="text-4xl font-extrabold text-secondary">15+</p>
+                        <p class="text-sm text-gray-500">Arangetrams Conducted</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-secondary">8</p>
+                        <p class="text-sm text-gray-500">Average Years of Training</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-secondary">100%</p>
+                        <p class="text-sm text-gray-500">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted Partners -->
+        <section class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-primary-base mb-10">Our Trusted Partners</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Partner 1 -->
+                <div class="p-6 rounded-xl border border-primary-base/50 bg-white card-shadow">
+                    <h3 class="text-xl font-semibold text-primary-base">SFBayandPhoto</h3>
+                    <p class="text-sm text-secondary mb-3">Photography & Videography</p>
+                    <p class="text-gray-600">Professional documentation of your sacred debut performance</p>
+                </div>
+
+                <!-- Partner 2 -->
+                <div class="p-6 rounded-xl border border-primary-base/50 bg-white card-shadow">
+                    <h3 class="text-xl font-semibold text-primary-base">Meenakshi Production Ensemble</h3>
+                    <p class="text-sm text-secondary mb-3">Musical Accompaniment</p>
+                    <p class="text-gray-600">Traditional live music ensemble for authentic classical experience</p>
+                </div>
+
+                <!-- Partner 3 -->
+                <div class="p-6 rounded-xl border border-primary-base/50 bg-white card-shadow">
+                    <h3 class="text-xl font-semibold text-primary-base">Bay Area Classical Musicians</h3>
+                    <p class="text-sm text-secondary mb-3">Vocal & Instrumental Support</p>
+                    <p class="text-gray-600">Renowned artists providing musical foundation for your performance</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center">
+            <div class="max-w-2xl mx-auto p-10 rounded-xl border-2 border-secondary bg-white card-shadow">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Ready for Your Arangetram?</h2>
+                <p class="text-gray-600 mb-8">If you believe your child is ready for this sacred milestone, or would like to discuss the Arangetram process, please reach out to us. We'll assess their readiness and guide you through this beautiful journey.</p>
+                <button class="button-primary text-white font-bold py-3 px-6 rounded-lg text-lg hover:scale-105 transform transition-transform duration-300">
+                    Contact Us About Arangetram
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <p>&copy; 2024 Sruthi School of Arts. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
