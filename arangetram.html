@@ -1,285 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sruthi School of Arts - Arangetram</title>
-    <style>
-        /* CSS Variables for New Colors */
-        :root {
-            --midnight-blue: hsl(210, 70%, 35%); /* #265D94 */
-            --bright-pink: hsl(330, 100%, 60%); /* #E6008A */
-            --light-bg: #f8faff; /* Very light blue/off-white */
-            --mid-bg: #eaf3ff; /* Slightly darker light blue */
-            --text-color: #333;
-            --white-color: white;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruthi School of Arts - Arangetram</title>
+    <style>
+        /* Global Styles that cannot be truly inlined or are best kept here */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-        /* Global Styles that cannot be truly inlined or are best kept here */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+        }
 
-        body {
-            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Utility for Active Nav Link */
-        .navbar a.active {
-            background-color: var(--bright-pink) !important;
-        }
-        
-        /* Responsive Design (these must be in a style block) */
-        @media (max-width: 992px) {
-            .navbar .container {
-                flex-direction: column;
-            }
+        /* Responsive Design (these must be in a style block) */
+        @media (max-width: 992px) {
+            .navbar .container {
+                flex-direction: column;
+            }
 
-            .navbar nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            .navbar nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
-            .navbar nav ul li {
-                margin: 5px 10px;
-            }
+            .navbar nav ul li {
+                margin: 5px 10px;
+            }
 
-            .what-is-arangetram-section .content-two-column {
-                flex-direction: column; /* Stack columns on smaller screens */
-                align-items: center;
-                gap: 40px;
-            }
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
 
-            .what-is-arangetram-section .image-content {
-                order: -1; /* Image appears above text on small screens */
-            }
+            .button {
+                width: 80%;
+                margin: 0 auto;
+            }
 
-            .what-is-arangetram-section .image-content img {
-                max-width: 80%;
-            }
+            .what-is-arangetram-section .content-two-column {
+                flex-direction: column; /* Stack columns on smaller screens */
+                align-items: center;
+                gap: 40px;
+            }
 
-            .legacy-stats {
-                gap: 30px;
-            }
-        }
+            .what-is-arangetram-section .image-content {
+                order: -1; /* Image appears above text on small screens */
+            }
 
-        @media (max-width: 768px) {
-            .page-hero-banner h1,
-            .journey-to-arangetram-section h2,
-            .our-legacy-section h2,
-            .trusted-partners-section h2,
-            .ready-for-arangetram-section h2 {
-                font-size: 2.2em;
-            }
+            .what-is-arangetram-section .image-content img {
+                max-width: 80%;
+            }
 
-            .page-hero-banner p,
-            .our-legacy-section p,
-            .ready-for-arangetram-section p {
-                font-size: 1em;
-            }
+            .legacy-stats {
+                gap: 30px;
+            }
+        }
 
-            .journey-stages-grid,
-            .partners-grid,
-            .arangetram-gallery {
-                grid-template-columns: 1fr; /* Stack cards/images vertically on smaller screens */
-            }
+        @media (max-width: 768px) {
+            .page-hero-banner h1,
+            .journey-to-arangetram-section h2,
+            .our-legacy-section h2,
+            .trusted-partners-section h2,
+            .ready-for-arangetram-section h2,
+            .call-to-action h2 {
+                font-size: 2.2em;
+            }
 
-            .stat-item .stat-number {
-                font-size: 3em;
-            }
+            .page-hero-banner p,
+            .our-legacy-section p,
+            .ready-for-arangetram-section p,
+            .call-to-action p {
+                font-size: 1em;
+            }
 
-            .stat-item .stat-label {
-                font-size: 1em;
-            }
-        }
+            .journey-stages-grid,
+            .partners-grid,
+            .arangetram-gallery {
+                grid-template-columns: 1fr; /* Stack cards/images vertically on smaller screens */
+            }
 
-        @media (max-width: 600px) {
-            .page-hero-banner h1,
-            .what-is-arangetram-section h2,
-            .journey-to-arangetram-section h2,
-            .our-legacy-section h2,
-            .trusted-partners-section h2,
-            .ready-for-arangetram-section h2 {
-                font-size: 1.8em;
-            }
+            .stat-item .stat-number {
+                font-size: 3em;
+            }
 
-            .what-is-arangetram-section .image-content img {
-                max-width: 100%;
-            }
+            .stat-item .stat-label {
+                font-size: 1em;
+            }
+        }
 
-            .stage-card,
-            .partner-card {
-                padding: 25px;
-            }
+        @media (max-width: 600px) {
+            .page-hero-banner h1,
+            .what-is-arangetram-section h2,
+            .journey-to-arangetram-section h2,
+            .our-legacy-section h2,
+            .trusted-partners-section h2,
+            .ready-for-arangetram-section h2,
+            .call-to-action h2 {
+                font-size: 1.8em;
+            }
 
-            .arangetram-gallery img {
-                height: 200px;
-            }
+            .what-is-arangetram-section .image-content img {
+                max-width: 100%;
+            }
 
-            .ready-for-arangetram-section .button {
-                font-size: 1em;
-                padding: 12px 25px;
-            }
-        }
-    </style>
+            .stage-card,
+            .partner-card {
+                padding: 25px;
+            }
+
+            .arangetram-gallery img {
+                height: 200px;
+            }
+
+            .ready-for-arangetram-section .button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar" style="background-color: var(--midnight-blue); color: var(--white-color); padding: 10px 0;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="logo" style="display: flex; align-items: center; font-size: 1.5em; font-weight: bold;">
-                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo" style="height: 40px; margin-right: 10px;">
-                <span>Sruthi School of Arts</span>
-            </div>
-            <nav>
-                <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
-                    <li style="margin-left: 20px;"><a href="index.html" style="color: var(--white-color); text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Home</a></li>
-                    <li style="margin-left: 20px;"><a href="director.html" style="color: var(--white-color); text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Director</a></li>
-                    <li style="margin-left: 20px;"><a href="classes.html" style="color: var(--white-color); text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Classes</a></li>
-                    <li style="margin-left: 20px;"><a href="events.html" style="color: var(--white-color); text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Events</a></li>
-                    <li style="margin-left: 20px;"><a href="arangetram.html" class="active" style="color: var(--white-color); text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px; background-color: var(--bright-pink);">Arangetram</a></li>
-                    <li style="margin-left: 20px;"><a href="contact.html" style="color: var(--white-color); text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header class="navbar" style="background-color: #8B0000; color: white; padding: 10px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="display: flex; align-items: center; font-size: 1.5em; font-weight: bold;">
+                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo" style="height: 40px; margin-right: 10px; filter: brightness(0) invert(1);">
+                <span>Sruthi School of Arts</span>
+            </div>
+            <nav>
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+                    <li style="margin-left: 20px;"><a href="index.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Home</a></li>
+                    <li style="margin-left: 20px;"><a href="director.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Director</a></li>
+                    <li style="margin-left: 20px;"><a href="classes.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Classes</a></li>
+                    <li style="margin-left: 20px;"><a href="events.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Events</a></li>
+                    <li style="margin-left: 20px;"><a href="arangetram.html" class="active" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px; background-color: #B22222;">Arangetram</a></li>
+                    <li style="margin-left: 20px;"><a href="contact.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section class="page-hero-banner" style="background-color: var(--midnight-blue); color: var(--white-color); text-align: center; padding: 60px 0 40px; position: relative;">
-        <div class="container" style="position: relative;">
-            <div class="logo-top-right" style="position: absolute; top: 0; right: 0;">
-                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo" style="height: 50px; opacity: 0.8; filter: brightness(0) invert(1);">
-            </div>
-            <h1 style="font-size: 2.8em; margin-bottom: 10px;">Arangetram</h1>
-            <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto;">The Sacred Debut - A Dancer's First Solo Performance</p>
-        </div>
-    </section>
+    <section class="page-hero-banner" style="background-color: #A52A2A; color: white; text-align: center; padding: 60px 0 40px;">
+        <div class="container">
+            <h1 style="font-size: 2.8em; margin-bottom: 10px;">Arangetram</h1>
+            <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto;">The Sacred Debut - A Dancer's First Solo Performance</p>
+        </div>
+    </section>
 
-    <section class="what-is-arangetram-section" style="background-color: var(--white-color); padding: 60px 0;">
-        <div class="container content-two-column" style="display: flex; gap: 40px; align-items: flex-start;">
-            <div class="main-content" style="flex: 2;">
-                <h2 style="color: var(--bright-pink); font-size: 2.2em; margin-bottom: 20px;">What is Arangetram?</h2>
-                <p style="margin-bottom: 15px; line-height: 1.6;">Arangetram, derived from the Tamil words 'Arangam' (stage) and 'Etram' (ascending), literally means "ascending the stage." It marks a classical dancer's debut solo performance, representing the culmination of years of rigorous training and the transition from student to artist.</p>
-                <p style="margin-bottom: 15px; line-height: 1.6;">This sacred tradition is not merely a performance but a spiritual milestone that demonstrates the dancer's mastery of technique, understanding of classical repertoire, and ability to convey the profound emotions and stories embedded in Bharatanatyam.</p>
-                <p style="margin-bottom: 15px; line-height: 1.6;">At Sruthi School of Arts, we consider Arangetram the most significant achievement in a student's classical dance journey, typically reached after 6-8 years of dedicated practice and learning.</p>
-            </div>
-            <div class="image-content" style="flex: 1; text-align: center;">
-                <img src="images/Screenshot 2025-11-26 at 6.46.13 PM.jpg" alt="Director Sharanyaa Ganesan at her desk" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); object-fit: cover; aspect-ratio: 4/3;">
-            </div>
-        </div>
-    </section>
+    <section class="what-is-arangetram-section" style="background-color: #FFF5EE; padding: 60px 0;">
+        <div class="container content-two-column" style="display: flex; gap: 40px; align-items: flex-start;">
+            <div class="main-content" style="flex: 2;">
+                <h2 style="color: #8B0000; font-size: 2.2em; margin-bottom: 20px;">What is Arangetram?</h2>
+                <p style="margin-bottom: 15px; line-height: 1.6;">Arangetram, derived from the Tamil words 'Arangam' (stage) and 'Etram' (ascending), literally means "ascending the stage." It marks a classical dancer's debut solo performance, representing the culmination of years of rigorous training and the transition from student to artist.</p>
+                <p style="margin-bottom: 15px; line-height: 1.6;">This sacred tradition is not merely a performance but a spiritual milestone that demonstrates the dancer's mastery of technique, understanding of classical repertoire, and ability to convey the profound emotions and stories embedded in Bharatanatyam.</p>
+                <p style="margin-bottom: 15px; line-height: 1.6;">At Sruthi School of Arts, we consider Arangetram the most significant achievement in a student's classical dance journey, typically reached after 6-8 years of dedicated practice and learning.</p>
+            </div>
+            <div class="image-content" style="text-align: center;">
+                                <img src="images/practice.jpg" alt="Student practicing dance" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); object-fit: cover; aspect-ratio: 4/3;">
+            </div>
+        </div>
+    </section>
 
-    <section class="journey-to-arangetram-section" style="background-color: var(--light-bg); padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h2 style="color: var(--midnight-blue); font-size: 2.5em; margin-bottom: 40px;">The Journey to Arangetram</h2>
-            <div class="journey-stages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-                <div class="stage-card" style="background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: left; border-top: 5px solid var(--bright-pink);">
-                    <h3 style="color: var(--midnight-blue); font-size: 1.6em; margin-bottom: 20px; text-align: center;">Years 1-3: Foundation</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Basic postures and movements</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Rhythm and coordination</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Simple adavus (dance steps)</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Cultural understanding</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Discipline and dedication</li>
-                    </ul>
-                </div>
-                <div class="stage-card" style="background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: left; border-top: 5px solid var(--bright-pink);">
-                    <h3 style="color: var(--midnight-blue); font-size: 1.6em; margin-bottom: 20px; text-align: center;">Years 4-6: Development</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Complex choreography</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Jathis and sequences</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Abhinaya (expression)</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Musical understanding</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Stage presence</li>
-                    </ul>
-                </div>
-                <div class="stage-card" style="background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: left; border-top: 5px solid var(--bright-pink);">
-                    <h3 style="color: var(--midnight-blue); font-size: 1.6em; margin-bottom: 20px; text-align: center;">Years 6-8: Mastery</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Full margam repertoire</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Solo performance skills</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Artistic interpretation</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Cultural ambassadorship</li>
-                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: var(--bright-pink); position: absolute; left: 0; top: 0; font-size: 1.2em;">&bull;</span>Arangetram preparation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="journey-to-arangetram-section" style="background-color: #F8F8F8; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: #8B0000; font-size: 2.5em; margin-bottom: 40px;">The Journey to Arangetram</h2>
+            <div class="journey-stages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div class="stage-card" style="background-color: #FFF0E6; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); text-align: left; display: flex; flex-direction: column;">
+                    <h3 style="color: #8B0000; font-size: 1.6em; margin-bottom: 20px; text-align: center;">Years 1-3: Foundation</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Basic postures and movements</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Rhythm and coordination</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Simple adavus (dance steps)</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Cultural understanding</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Discipline and dedication</li>
+                    </ul>
+                </div>
+                <div class="stage-card" style="background-color: #E6F3FF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); text-align: left; display: flex; flex-direction: column;">
+                    <h3 style="color: #8B0000; font-size: 1.6em; margin-bottom: 20px; text-align: center;">Years 4-6: Development</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Complex choreography</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Jathis and sequences</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Abhinaya (expression)</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Musical understanding</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Stage presence</li>
+                    </ul>
+                </div>
+                <div class="stage-card" style="background-color: #E6FFE6; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); text-align: left; display: flex; flex-direction: column;">
+                    <h3 style="color: #8B0000; font-size: 1.6em; margin-bottom: 20px; text-align: center;">Years 6-8: Mastery</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Full margam repertoire</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Solo performance skills</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Artistic interpretation</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Cultural ambassadorship</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Arangetram preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="our-arangetrams-section" style="background-color: var(--white-color); padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h2 style="color: var(--midnight-blue); font-size: 2.5em; margin-bottom: 20px;">Our Arangetrams</h2>
-            <div class="arangetram-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px;">
-                <img src="images/Screenshot 2025-11-26 at 6.46.40 PM.jpg" alt="Students on a bed with a laptop" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow);">
-                <img src="images/Screenshot 2025-11-26 at 6.46.40 PM.jpg" alt="Eerie forest path" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow);">
-            </div>
+    <section class="our-legacy-section" style="background-color: #FFF5EE; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: #8B0000; font-size: 2.5em; margin-bottom: 20px;">Our Legacy</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px auto; font-size: 1.1em; color: #555;">Over the past decade, Sruthi School of Arts has proudly facilitated over <strong style="font-weight: bold;">6 successful Arangetrams</strong>, each one a unique celebration of the individual dancer's journey and artistic expression.</p>
+            <div class="legacy-stats" style="display: flex; justify-content: center; gap: 50px; margin-bottom: 50px; flex-wrap: wrap;">
+                <div class="stat-item" style="text-align: center;">
+                    <span class="stat-number" style="font-size: 3.5em; font-weight: bold; color: #CD5C5C; display: block; margin-bottom: 5px;">6</span>
+                    <span class="stat-label" style="font-size: 1.1em; color: #555; white-space: nowrap;">Arangetrams Conducted</span>
+                </div>
+                <div class="stat-item" style="text-align: center;">
+                    <span class="stat-number" style="font-size: 3.5em; font-weight: bold; color: #CD5C5C; display: block; margin-bottom: 5px;">8</span>
+                    <span class="stat-label" style="font-size: 1.1em; color: #555; white-space: nowrap;">Average Years of Training</span>
+                </div>
+                <div class="stat-item" style="text-align: center;">
+                    <span class="stat-number" style="font-size: 3.5em; font-weight: bold; color: #CD5C5C; display: block; margin-bottom: 5px;">100%</span>
+                    <span class="stat-label" style="font-size: 1.1em; color: #555; white-space: nowrap;">Success Rate</span>
+                </div>
+            </div>
+            <div class="arangetram-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px;">
+                                <img src="images/aunties invite.jpg" alt="Arangetram Image 1" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                                <img src="images/shriya invite.jpg" alt="Arangetram Image 2" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                                <img src="images/image_de18d9.jpg" alt="Arangetram Image 3" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            </div>
+        </div>
+    </section>
 
-            <div class="our-legacy-card" style="background-color: var(--mid-bg); border: 2px solid var(--bright-pink); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); max-width: 800px; margin: 40px auto 50px;">
-                <h3 style="color: var(--midnight-blue); font-size: 1.8em; margin-bottom: 15px;">Our Legacy</h3>
-                <p style="max-width: 800px; margin: 0 auto 40px auto; font-size: 1.1em; color: var(--text-color);">Over the past decade, Sruthi School of Arts has proudly facilitated over <strong style="font-weight: bold;">15 successful Arangetrams</strong>, each one a unique celebration of the individual dancer's journey and artistic expression.</p>
-                <div class="legacy-stats" style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
-                    <div class="stat-item" style="text-align: center;">
-                        <span class="stat-number" style="font-size: 3.5em; font-weight: bold; color: var(--bright-pink); display: block; margin-bottom: 5px;">15+</span>
-                        <span class="stat-label" style="font-size: 1.1em; color: var(--text-color); white-space: nowrap;">Arangetrams Conducted</span>
-                    </div>
-                    <div class="stat-item" style="text-align: center;">
-                        <span class="stat-number" style="font-size: 3.5em; font-weight: bold; color: var(--bright-pink); display: block; margin-bottom: 5px;">8</span>
-                        <span class="stat-label" style="font-size: 1.1em; color: var(--text-color); white-space: nowrap;">Average Years of Training</span>
-                    </div>
-                    <div class="stat-item" style="text-align: center;">
-                        <span class="stat-number" style="font-size: 3.5em; font-weight: bold; color: var(--bright-pink); display: block; margin-bottom: 5px;">100%</span>
-                        <span class="stat-label" style="font-size: 1.1em; color: var(--text-color); white-space: nowrap;">Success Rate</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="trusted-partners-section" style="background-color: #F8F8F8; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: #8B0000; font-size: 2.5em; margin-bottom: 40px;">Our Trusted Partners</h2>
+            <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div class="partner-card" style="background-color: #FFFFFF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); text-align: center; border-top: 5px solid #CD5C5C;">
+                    <h3 style="color: #8B0000; font-size: 1.6em; margin-bottom: 5px;">SFBayandPhoto</h3>
+                    <p class="partner-role" style="color: #B22222; font-weight: bold; font-style: italic; margin-bottom: 15px;">Photography & Videography</p>
+                    <p>Professional documentation of your sacred debut performance</p>
+                </div>
+                <div class="partner-card" style="background-color: #FFFFFF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); text-align: center; border-top: 5px solid #CD5C5C;">
+                    <h3 style="color: #8B0000; font-size: 1.6em; margin-bottom: 5px;">Meenakshi Production Ensemble</h3>
+                    <p class="partner-role" style="color: #B22222; font-weight: bold; font-style: italic; margin-bottom: 15px;">Musical Accompaniment</p>
+                    <p>Traditional live music ensemble for authentic classical experience</p>
+                </div>
+                <div class="partner-card" style="background-color: #FFFFFF; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); text-align: center; border-top: 5px solid #CD5C5C;">
+                    <h3 style="color: #8B0000; font-size: 1.6em; margin-bottom: 5px;">Bay Area Classical Musicians</h3>
+                    <p class="partner-role" style="color: #B22222; font-weight: bold; font-style: italic; margin-bottom: 15px;">Vocal & Instrumental Support</p>
+                    <p>Renowned artists providing musical foundation for your performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="trusted-partners-section" style="background-color: var(--light-bg); padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h2 style="color: var(--midnight-blue); font-size: 2.5em; margin-bottom: 40px;">Our Trusted Partners</h2>
-            <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-                <div class="partner-card" style="background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: center; border-top: 5px solid var(--bright-pink);">
-                    <h3 style="color: var(--midnight-blue); font-size: 1.6em; margin-bottom: 5px;">SFBayandPhoto</h3>
-                    <p class="partner-role" style="color: var(--bright-pink); font-weight: bold; font-style: italic; margin-bottom: 15px;">Photography & Videography</p>
-                    <p>Professional documentation of your sacred debut performance</p>
-                </div>
-                <div class="partner-card" style="background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: center; border-top: 5px solid var(--bright-pink);">
-                    <h3 style="color: var(--midnight-blue); font-size: 1.6em; margin-bottom: 5px;">Meenakshi Production Ensemble</h3>
-                    <p class="partner-role" style="color: var(--bright-pink); font-weight: bold; font-style: italic; margin-bottom: 15px;">Musical Accompaniment</p>
-                    <p>Traditional live music ensemble for authentic classical experience</p>
-                </div>
-                <div class="partner-card" style="background-color: var(--white-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: center; border-top: 5px solid var(--bright-pink);">
-                    <h3 style="color: var(--midnight-blue); font-size: 1.6em; margin-bottom: 5px;">Bay Area Classical Musicians</h3>
-                    <p class="partner-role" style="color: var(--bright-pink); font-weight: bold; font-style: italic; margin-bottom: 15px;">Vocal & Instrumental Support</p>
-                    <p>Renowned artists providing musical foundation for your performance</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="ready-for-arangetram-section" style="background-color: #FFF5EE; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: #8B0000; font-size: 2.5em; margin-bottom: 20px;">Ready for Your Arangetram?</h2>
+            <p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1em; color: #555;">If you believe your child is ready for this sacred milestone, or would like to discuss the Arangetram process, please reach out to us. We'll assess their readiness and guide you through this beautiful journey.</p>
+            <a href="contact.html" class="button primary-button" style="background-color: #CD5C5C; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">Contact Us About Arangetram</a>
+        </div>
+    </section>
 
-    <section class="ready-for-arangetram-section" style="background-color: var(--white-color); padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h2 style="color: var(--midnight-blue); font-size: 2.5em; margin-bottom: 20px;">Ready for Your Arangetram?</h2>
-            <p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1em; color: var(--text-color);">If you believe your child is ready for this sacred milestone, or would like to discuss the Arangetram process, please reach out to us. We'll assess their readiness and guide you through this beautiful journey.</p>
-            <a href="contact.html" class="button primary-button" style="background-color: var(--bright-pink); color: var(--white-color); padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">Contact Us About Arangetram</a>
-        </div>
-    </section>
-
-    <footer style="background-color: var(--midnight-blue); color: var(--white-color); text-align: center; padding: 20px 0; font-size: 0.9em;">
-        <div class="container">
-            <p style="margin: 0;">&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 0; font-size: 0.9em;">
+        <div class="container">
+            <p style="margin: 0;">&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
