@@ -3,169 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sruthi School of Arts</title>
-    <style>
-        /* Global Styles that cannot be truly inlined or are best kept here */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-        body {
-            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Responsive Design (these must be in a style block) */
-        @media (max-width: 992px) {
-            .navbar .container {
-                flex-direction: column;
-            }
-
-            .navbar nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .navbar nav ul li {
-                margin: 5px 10px;
-            }
-
-            .hero-banner h1 {
-                font-size: 2.5em;
-            }
-
-            .bharatanatyam-description .content-two-column {
-                flex-direction: column; /* Stack columns on smaller screens */
-                align-items: center; /* Center items when stacked */
-                gap: 40px; /* Increase gap when stacked */
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .button {
-                width: 80%;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-banner h1 {
-                font-size: 2em;
-            }
-
-            .hero-banner p {
-                font-size: 1em;
-            }
-
-            .our-students-performances h2,
-            .bharatanatyam-description .main-content h2,
-            .call-to-action h2 {
-                font-size: 2.2em;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero-banner h1 {
-                font-size: 1.8em;
-            }
-
-            .hero-banner p {
-                font-size: 1em;
-            }
-
-            .our-students-performances h2,
-            .bharatanatyam-description .main-content h2,
-            .call-to-action h2 {
-                font-size: 1.8em;
-            }
-        }
-    </style>
+    <title>Home - [Site Name]</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar" style="background-color: #8B0000; color: white; padding: 10px 0;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="logo" style="display: flex; align-items: center; font-size: 1.5em; font-weight: bold;">
-                <img src="images/Screen Shot 2025-06-30 at 7.24.40 PM.png" alt="Sruthi School of Arts Logo" style="height: 40px; margin-right: 10px; filter: brightness(0) invert(1);">
-                <span>Sruthi School of Arts</span>
+    <div class="hero">
+        <div class="logo-container">
+            <img src="image_de15b7.png" alt="Company Logo">
+        </div>
+        <h1>Welcome to the Dance Academy</h1>
+        <p>Preserving tradition, inspiring the next generation.</p>
+    </div>
+
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="director.html">Director</a>
+        <a href="classes.html">Classes</a>
+        <a href="events.html">Events</a>
+        <a href="arangetram.html">Arangetram</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="content-section">
+        <h2>Our Mission</h2>
+        <p>We are dedicated to providing high-quality training in classical Indian dance forms. Our curriculum is designed to nurture discipline, creativity, and a deep appreciation for the arts.</p>
+
+        <div class="card-layout">
+            <div class="card">
+                <h3>Upcoming Arangetram</h3>
+                <img src="image_de18d9.jpg" alt="Arangetram Dancers">
+                <p>See the details for the next grand solo debut!</p>
+                <a href="arangetram.html"><button>View Details</button></a>
             </div>
-            <nav>
-                <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
-                    <li style="margin-left: 20px;"><a href="index.html" class="active" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px; background-color: #B22222;">Home</a></li>
-                    <li style="margin-left: 20px;"><a href="director.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Director</a></li>
-                    <li style="margin-left: 20px;"><a href="classes.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Classes</a></li>
-                    <li style="margin-left: 20px;"><a href="events.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Events</a></li>
-                    <li style="margin-left: 20px;"><a href="arangetram.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Arangetram</a></li>
-                    <li style="margin-left: 20px;"><a href="contact.html" style="color: white; text-decoration: none; padding: 5px 10px; transition: background-color 0.3s ease; border-radius: 5px;">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero-banner" style="background-color: #A52A2A; color: white; text-align: center; padding: 80px 0;">
-        <div class="container">
-            <h1 style="font-size: 3em; margin-bottom: 20px;">Sruthi School of Arts</h1>
-            <p style="font-size: 1.2em; max-width: 800px; margin: 0 auto 20px auto;">Preserving the Classical Tradition of Bharatanatyam</p>
-            <p style="font-size: 1.2em; max-width: 800px; margin: 0 auto 20px auto;">Located in the heart of Ardenwood, Fremont, California, we are dedicated to teaching the ancient and divine art of Bharatanatyam with passion, precision, and cultural authenticity.</p>
-        </div>
-    </section>
-
-    <section class="our-students-performances" style="background-color: #F8F8F8; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h2 style="color: #8B0000; margin-bottom: 40px; font-size: 2.5em;">Our Students & Performances</h2>
-            <div class="performance-image">
-                <img src="images/Screen Shot 2025-06-30 at 7.24.27 PM.png" alt="Students Performing Bharatanatyam" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            </div>
-        </div>
-    </section>
-
-    <section class="bharatanatyam-description" style="padding: 60px 0; background-color: #E6E6FA;">
-        <div class="container content-two-column" style="display: flex; gap: 40px; align-items: flex-start;">
-            <div class="main-content" style="flex: 2;">
-                <h2 style="color: #8B0000; font-size: 2em; margin-bottom: 20px;">The Art of Bharatanatyam</h2>
-                <p style="margin-bottom: 15px;">Bharatanatyam is one of India's oldest and most revered classical dance forms, originating from the temples of Tamil Nadu. This divine art form is characterized by its emphasis on rapid foot movements, intricate hand gestures (mudras), and expressive facial expressions that work together to tell meaningful stories.</p>
-                <p style="margin-bottom: 15px;">What makes Bharatanatyam truly unique is its ability to encapsulate and portray religious stories, mythological tales, and spiritual themes through precise choreography. Each movement has significance, each gesture tells a story, and each expression conveys deep emotion.</p>
-                <p style="margin-bottom: 15px;">At Sruthi School of Arts, we preserve this ancient tradition while making it accessible to students of all backgrounds, fostering discipline, cultural appreciation, and artistic excellence.</p>
-            </div>
-            <aside class="key-elements" style="flex: 1; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #8B0000; margin-bottom: 20px; font-size: 1.5em;">Key Elements</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Intricate hand gestures (Mudras)</li>
-                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Rapid, rhythmic foot movements</li>
-                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Expressive facial expressions (Abhinaya)</li>
-                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Spiritual storytelling through dance</li>
-                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><span style="content: '•'; color: #B22222; font-size: 1.2em; position: absolute; left: 0; top: 0;">&bull;</span>Traditional music and rhythm</li>
-                </ul>
-            </aside>
-        </div>
-    </section>
-
-    <section class="call-to-action" style="background-color: #CD5C5C; color: white; text-align: center; padding: 60px 0;">
-        <div class="container">
-            <h2 style="font-size: 2.5em; margin-bottom: 20px;">Begin Your Dance Journey</h2>
-            <p style="font-size: 1.1em; margin-bottom: 30px;">Join our community of dedicated students and discover the beauty of classical Indian dance</p>
-            <div class="cta-buttons" style="display: flex; justify-content: center; gap: 20px;">
-                <a href="classes.html" class="button primary-button" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; background-color: #FF4500; color: white; border: 2px solid #FF4500;">Explore Classes</a>
-                <a href="contact.html" class="button secondary-button" style="display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; background-color: transparent; color: white; border: 2px solid white;">Contact Us</a>
+            <div class="card">
+                <h3>Join a Class</h3>
+                <img src="image_de1633.jpg" alt="Students in Class">
+                <p>Find the perfect class for your skill level.</p>
+                <a href="classes.html"><button>View Classes</button></a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 0; font-size: 0.9em;">
-        <div class="container">
-            <p style="margin: 0;">&copy; 2025 Sruthi School of Arts. All rights reserved.</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2025 Dance Academy. All rights reserved.</p>
     </footer>
 </body>
 </html>
