@@ -22,11 +22,11 @@ Below is a list of all image files used on your Sruthi School of Arts website, a
     <img src="shriya invite.png" width="100" alt="Thumbnail">
 </div>
 
-<div class="asset-details">
-    <p><strong>Asset:</strong> Arangetramm Profile Image</p>
-    <p><strong>File Name:</strong> shriya invite.png</p>
-    <p><strong>Alt Text:</strong> eerie wtv</p>
-    <img src="class sitting.png" width="100" alt="Thumbnail">
+<div class="asset-details" style="border-bottom: 1px solid #ddd; padding: 15px 0;">
+    <p><strong>Asset:</strong> Class Structure Visual</p>
+    <p><strong>File Name:</strong> class sitting.png</p>
+    <p><strong>Alt Text:</strong> Students in a Dance Class</p>
+    <img src="images/class sitting.png" width="100" alt="Thumbnail">
 </div>
 
 
