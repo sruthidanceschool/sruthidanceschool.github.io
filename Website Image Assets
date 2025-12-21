@@ -1,6 +1,13 @@
 Website Image Assets
 Below is a list of all image files used on your Sruthi School of Arts website, along with their relative paths and descriptive alt text.
 
+<div class="asset-details">
+    <p><strong>Asset:</strong> Director Profile Image</p>
+    <p><strong>File Name:</strong> IMG_2481.JPG</p>
+    <p><strong>Alt Text:</strong> Director Sharanyaa Ganesan</p>
+    <img src="images/IMG_2481.JPG" width="100" alt="Thumbnail">
+</div>
+
 images/Screen Shot 2025-06-30 at 7.24.40 PM.png (Sruthi School of Arts Logo)
 Used on: All pages (Navbar Logo)
 
