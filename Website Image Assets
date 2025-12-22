@@ -29,6 +29,13 @@ Below is a list of all image files used on your Sruthi School of Arts website, a
     <img src="images/class_sitting.png" width="100" alt="Thumbnail">
 </div>
 
+<div class="asset-details" style="border-bottom: 1px solid #ddd; padding: 15px 0;">
+    <p><strong>Asset:</strong> Class Structure Visual</p>
+    <p><strong>File Name:</strong> production.png</p>
+    <p><strong>Alt Text:</strong> Students in a Dance Class</p>
+    <img src="images/production.png" width="100" alt="Thumbnail">
+</div>
+
 
 images/Screen Shot 2025-06-30 at 7.24.40 PM.png (Sruthi School of Arts Logo)
 Used on: All pages (Navbar Logo)
